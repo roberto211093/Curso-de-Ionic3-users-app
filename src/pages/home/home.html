@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <button ion-button block (click)="goToTasksPage()">
+      Ir al tareas
+    </button>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let user of users"><!--Renderizamos los users-->
+      <ion-avatar item-start>
+        <img [src]="user.picture.medium"><!--mostramos la imagen de los users-->
+      </ion-avatar>
+      <h2>{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</h2><!--nombre y apellido de los users-->
+      <p>{{ user.email }}</p><!--email de los users-->
+    </ion-item>
+  </ion-list>
+</ion-content>
